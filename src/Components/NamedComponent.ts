@@ -15,14 +15,37 @@ class NamedComponent implements Component {
         return this._component
     }
 
+    _getTypedAttribute(ele: Element, key: string):any {
+        const value:string = ele.getAttribute(key) || ''
+        const definedMeta = this.component.props[key] || { type: null }
+        const attributeType:string = definedMeta && definedMeta.type ? definedMeta.type.name : 'String'
+
+        try {
+            if (attributeType === Vue.PropsTypes.String) {
+                return String(value)
+            } else if (attributeType === Vue.PropsTypes.Number) {
+                return Number(value)
+            } else if (attributeType === Vue.PropsTypes.Boolean) {
+                return eval(`${value.toLowerCase()}`)
+            } else {
+                return eval(`${value}`)
+            }
+        } catch {
+            return String(value)
+        }
+    }
+
     mount(VueObject: any, queryString?: string): void {
-        document.querySelectorAll(`${queryString || this.name}`).forEach(ele => {
-            console.log(this.component);
-            Object.keys(this.component.props).map(key => {
-                // @ts-ignore
-                // console.log('keys ', key, this.component.props[key], this.component.props[key].type.name, this.component.props[key].type(), 'end')
-            });
-            new VueObject({props: { myname: 'dfsdfsdf'}, render: (h: (comp: any, obj:any) => {}) => h({ ...this.component, myname: 'hoho'}, { props: {myname: 'arg'}})}).$mount(ele)
+        document.querySelectorAll(`${queryString || this.name}`).forEach((ele:Element) => {
+            const props = ele.getAttributeNames().reduce((props: { [key: string] : any }, key) => {
+                props[key] = this._getTypedAttribute(ele, key)
+                return props
+            }, {})
+            new VueObject({
+                render: (h: (comp: any, obj: any) => {}) => h({
+                    ...this.component
+                }, {props})
+            }).$mount(ele)
         })
     }
 }
