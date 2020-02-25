@@ -1,6 +1,6 @@
 {
   "name": "vue-embedded-widget",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "Vue embedded widget system",
   "main": "./dist/index.js",
   "scripts": {
