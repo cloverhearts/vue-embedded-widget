@@ -1,21 +1,26 @@
 {
   "name": "vue-embedded-widget",
-  "version": "1.0.0",
-  "description": "Vue embedded widget",
+  "version": "0.1.0",
+  "description": "Vue embedded widget system",
   "main": "./dist/index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
     "build": "tsc"
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/cloverhearts/vue-embeded-widget.git"
+    "url": "git+https://github.com/cloverhearts/vue-embedded-widget.git"
   },
-  "keywords": [],
-  "author": "",
-  "license": "ISC",
+  "keywords": [
+    "vue", "widget", "ui", "library", "migration", "spa"
+  ],
+  "author": {
+    "name" : "CloverHearts",
+    "email" : "cheartsdev+vuewidget@gmail.com",
+    "url" : "https://github.com/cloverhearts"
+  },
+  "license": "MIT",
   "bugs": {
-    "url": "https://github.com/cloverhearts/vue-embeded-widget/issues"
+    "url": "https://github.com/cloverhearts/vue-embedded-widget/issues"
   },
-  "homepage": "https://github.com/cloverhearts/vue-embeded-widget#readme"
+  "homepage": "https://github.com/cloverhearts/vue-embedded-widget#readme"
 }
