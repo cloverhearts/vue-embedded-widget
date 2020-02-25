@@ -1,7 +1,7 @@
 {
-  "name": "vue-embeded-widget",
+  "name": "vue-embedded-widget",
   "version": "1.0.0",
-  "description": "Vue embeded widget",
+  "description": "Vue embedded widget",
   "main": "./dist/index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
