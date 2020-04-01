@@ -4,7 +4,7 @@
   "private": true,
   "scripts": {
     "serve": "vue-cli-service serve",
-    "build": "vue-cli-service build --dest ../docs/components --target lib --filename vue-component-widgets-v1"
+    "build": "vue-cli-service build --dest ../docs/components --filename vue-component-widgets-v1"
   },
   "dependencies": {
     "core-js": "^3.6.4",

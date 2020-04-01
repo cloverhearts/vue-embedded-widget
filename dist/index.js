@@ -11,6 +11,7 @@ exports.default = (function (vue) {
             list.push(new NamedComponent_1.default(name || component.name, component));
         },
         printList: function () {
+            console.log(list, vue);
         },
         mount: function () {
             list.forEach(function (comp) { return comp.mount(vue); });

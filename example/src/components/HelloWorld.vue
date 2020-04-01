@@ -1,6 +1,6 @@
 <template>
   <div class="hello">
-    Vue app {{}}
+    Vue app {{msg}}
   </div>
 </template>
 

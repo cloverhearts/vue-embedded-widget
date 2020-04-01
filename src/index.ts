@@ -7,6 +7,7 @@ export default (vue:any) => {
             list.push(new NamedComponent( name || component.name, component))
         },
         printList: ():void => {
+            console.log(list, vue)
         },
         mount: ():void => {
             list.forEach(comp => comp.mount(vue))
