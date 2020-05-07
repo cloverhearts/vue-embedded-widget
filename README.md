@@ -104,10 +104,9 @@ document.addEventListener('DOMContentLoaded', () => {
 가령, 당신이 하단의 스크립트를 당신의 로컬 index.html이나 codepen과 같은 외부 환경에서 다음을 고스란히 넣어보세요. 그 즉시 별도의 구현없이도 vue component 들이 랜더링 될 것입니다.
 
 ```
-  <script src="https://raw.githack.com/cloverhearts/vue-embedded-widget/feature/example/docs/components/js/chunk-vendors.56c457bf.js"></script>
-  <script src="https://raw.githack.com/cloverhearts/vue-embedded-widget/feature/example/docs/components/js/app.2b726121.js"></script>
-  <link rel="stylesheet" href="https://raw.githubusercontent.com/cloverhearts/vue-embedded-widget/feature/example/docs/components/css/app.7275f92c.css" />
-  <script src="./components/js/chunk-vendors.56c457bf.js"></script>
+<script src="https://raw.githack.com/cloverhearts/vue-embedded-widget/master/docs/components/js/chunk-vendors.56c457bf.js"></script>
+<script src="https://raw.githack.com/cloverhearts/vue-embedded-widget/master/docs/components/js/app.2b726121.js"></script>
+<link rel="stylesheet" href="https://raw.githack.com/cloverhearts/vue-embedded-widget/master/docs/components/css/app.7275f92c.css" />
 
   <test-my-comp msg="vue-app!"></test-my-comp>
   <div data-vue-app="nice" msg="안녕!"></div>
