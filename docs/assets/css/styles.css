@@ -16,6 +16,12 @@ main {
     }
 }
 
+@media (min-width: 1300px) {
+    main {
+        margin: 0px 30vw;
+    }
+}
+
 @media (max-width: 850px) {
     main {
         margin: 0 0;
@@ -67,8 +73,23 @@ header .meta .language span:nth-child(n + 2):before {
 }
 
 section {
+    font-size: 15px;
     padding: 10px 30px;
     color: white !important;
+    word-break: keep-all;
+}
+
+h3 {
+    font-size: 20px;
+}
+
+p {
+    padding: 5px;
+}
+
+img {
+    margin: 20px 20px 20px 0px;
+    width: 100%;
 }
 
 section.introduce {

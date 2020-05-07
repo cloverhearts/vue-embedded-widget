@@ -12,8 +12,8 @@
 
   <!-- start: vue-embedded-widget library -->
   <script src="https://raw.githack.com/cloverhearts/vue-embedded-widget/feature/example/docs/components/js/chunk-vendors.56c457bf.js"></script>
-  <script src="https://raw.githack.com/cloverhearts/vue-embedded-widget/feature/example/docs/components/js/app.c985f67e.js"></script>
-  <link rel="stylesheet" href="https://raw.githubusercontent.com/cloverhearts/vue-embedded-widget/feature/example/docs/components/css/app.3ef58019.css" />
+  <script src="https://raw.githack.com/cloverhearts/vue-embedded-widget/feature/example/docs/components/js/app.2b726121.js"></script>
+  <link rel="stylesheet" href="https://raw.githubusercontent.com/cloverhearts/vue-embedded-widget/feature/example/docs/components/css/app.7275f92c.css" />
   <!-- end: vue-embedded-widget library -->
   <title>VEW - Vue Embedded Widget</title>
 </head>
@@ -24,6 +24,9 @@
         <h1>VEW</h1>
         <p class="full-name">Vue Embedded Widget</p>
         <div class="meta">
+          <div class="repo" style="color: white !important; background: #41B883; margin-bottom: 15px; display: inline-block; padding: 2px 10px">
+            Author: CloverHearts, Repo: <a href="https://github.com/cloverhearts/vue-embedded-widget">GITHUB</a>
+          </div>
           <div class="language">
             <span>English</span>
             <span>
@@ -36,19 +39,138 @@
       
       </header>
       <section>
-        <h2>Introduce for VEW</h2>
+        <h2>VEW (Vue Embedded Widget) 소개</h2>
         <p>
-          소개소개소개
+          현재 (2018년 ~ 현재) 많은 웹 서비스들이 Jquery 기반의 웹 페이지에서 Vue나 React 기반의 Modern Web app으로 전환을 진행하고 있습니다.
+        </p>
+        <p>
+          그러나 기존 운영중인 서비스가 있는 환경의 경우 기존의 레거시 웹페이지 구성을 단번에 현대적인 웹앱 구성으로 변경할 수 없는 것이 사실이며, 결과적으로 Jquery 기반의 레거시 웹을 Vue나 React의 현대적인 구성의 웹페이지로 전환이 실패하는 사례가 많은 것이 사실입니다.
+        </p>
+        <p>
+          이 라이브러리를 개발한 시점의 저역시 마찬가지 상황이었으며, 이에 대한 해결책을 찾아해매며 낸 결론은, 운영중인 서비스가 존재하는 상황에서 현대적인 웹앱으로의 전환을 위해 현대적인 웹앱의 컴포넌트 구성과 레거시 웹의 구성이 전환되는 중간 과정이 필요하다는 것이었습니다.
+        </p>
+        <p>
+          <div style="text-align: center;" >
+            <img src="https://user-images.githubusercontent.com/10525473/81318339-139b6a00-90c9-11ea-8cc8-a4eb16e2f4b3.png" />
+          </div>
+          구름에 위치한 중간 과정을 저는 편의상 "하이브리드 앱 상태(Hybrid app status)"라고 부르겠습니다.
+          대표적으로 사용되는 Vue 프레임워크의 하이브리드 앱 상태를 목적으로 만들어진 VEW 라이브러리는 다음 상태를 목적으로 하여 만들어졌습니다.
+        </p>
+        <h3>설치</h3>
+        <p>
+    <pre class="hljs" style="color: rgb(169, 183, 198); background: rgb(40, 43, 46); display: block; overflow-x: auto; padding: 0.5em;">npm <span class="hljs-keyword" style="color: rgb(204, 120, 50);">install</span> <span class="hljs-comment" style="color: grey;">--save vue-embedded-widget</span></pre>
+        </p>
+        <h3>목적과 사용방법</h3>
+        <p>
+          <div style="text-align: center;" >
+            <img src="https://user-images.githubusercontent.com/10525473/81318341-14340080-90c9-11ea-9865-a24a4d303e3e.png" />
+          </div>
+          VEW 라이브러리를 통하여, 신규로 구성 개발이 필요한 웹페이지의 기능적 구성을 Vue의 컴포넌트 단위의 개발로 전환합니다.
+        </p>
+        <p>
+          현대적인 구조로 작성한 컴포넌트들을 기존의 프로젝트에 HTML Element를 삽입하는 단순한 동작으로
+          Vue 컴포넌트와 기존의 웹 페이지의 구성들을 그대로 가져갈 수 있습니다.
+          Vue 컴포넌트를 삽입하는 방법은 기존의 HTML Markup과 완전히 동일하므로 업무의 변화도 크지 않습니다.
+        </p>
+        <p>
+
+        <pre class="hljs" style="color: rgb(169, 183, 198); background: rgb(40, 43, 46); display: block; overflow-x: auto; padding: 0.5em;"><span class="xml">  // app js loaded
+  <span class="hljs-tag">&lt;<span class="hljs-name" style="color: rgb(232, 191, 106);">script</span> <span class="hljs-attr">src</span>=<span class="hljs-string" style="color: rgb(106, 135, 89);">"./components/js/app.2b726121.js"</span>&gt;</span><span class="undefined"></span><span class="hljs-tag">&lt;/<span class="hljs-name" style="color: rgb(232, 191, 106);">script</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name" style="color: rgb(232, 191, 106);">link</span> <span class="hljs-attr">rel</span>=<span class="hljs-string" style="color: rgb(106, 135, 89);">"stylesheet"</span> <span class="hljs-attr">href</span>=<span class="hljs-string" style="color: rgb(106, 135, 89);">"./components/css/app.7275f92c.css"</span> /&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name" style="color: rgb(232, 191, 106);">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string" style="color: rgb(106, 135, 89);">"lagacy-codes"</span>&gt;</span>
+    ....
+    // vue component
+    <span class="hljs-tag">&lt;<span class="hljs-name" style="color: rgb(232, 191, 106);">vue-component</span> <span class="hljs-attr">msg</span>=<span class="hljs-string" style="color: rgb(106, 135, 89);">"vue-app!"</span> /&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-name" style="color: rgb(232, 191, 106);">div</span>&gt;</span></span></pre>
+        ~ Inject 코드 ~
+        </p>
+        <p>
+        <pre class="hljs" style="color: rgb(169, 183, 198); background: rgb(40, 43, 46); display: block; overflow-x: auto; padding: 0.5em;"><span class="xml"><span class="hljs-tag">&lt;<span class="hljs-name" style="color: rgb(232, 191, 106);">template</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name" style="color: rgb(232, 191, 106);">VueAppAnchor</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name" style="color: rgb(232, 191, 106);">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string" style="color: rgb(106, 135, 89);">"hello"</span>&gt;</span>
+      </span><span class="hljs-template-variable" style="color: rgb(98, 151, 85);">{{msg}}</span><span class="xml"> with Vue component!
+    <span class="hljs-tag">&lt;/<span class="hljs-name" style="color: rgb(232, 191, 106);">div</span>&gt;</span>
+  <span class="hljs-tag">&lt;/<span class="hljs-name" style="color: rgb(232, 191, 106);">VueAppAnchor</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-name" style="color: rgb(232, 191, 106);">template</span>&gt;</span>
+
+<span class="hljs-tag">&lt;<span class="hljs-name" style="color: rgb(232, 191, 106);">script</span>&gt;</span><span class="javascript">
+  <span class="hljs-keyword" style="color: rgb(204, 120, 50);">import</span> VueAppAnchor <span class="hljs-keyword" style="color: rgb(204, 120, 50);">from</span> <span class="hljs-string" style="color: rgb(106, 135, 89);">'./VueComponentHere'</span>
+<span class="hljs-keyword" style="color: rgb(204, 120, 50);">export</span> <span class="hljs-keyword" style="color: rgb(204, 120, 50);">default</span> {
+  name: <span class="hljs-string" style="color: rgb(106, 135, 89);">'HelloWorld'</span>,
+  components: { VueAppAnchor },
+  props: {
+    msg: <span class="hljs-built_in">String</span>
+  }
+}
+</span><span class="hljs-tag">&lt;/<span class="hljs-name" style="color: rgb(232, 191, 106);">script</span>&gt;</span>
+
+<span class="hljs-tag">&lt;<span class="hljs-name" style="color: rgb(232, 191, 106);">style</span> <span class="hljs-attr">scoped</span>&gt;</span><span class="undefined">
+...
+</span><span class="hljs-tag">&lt;/<span class="hljs-name" style="color: rgb(232, 191, 106);">style</span>&gt;</span>
+</span></pre>
+        ~ Vue "HelloWorld" Component 구현 코드 ~
+        </p>
+        <p>
+        <pre class="hljs" style="color: rgb(169, 183, 198); background: rgb(40, 43, 46); display: block; overflow-x: auto; padding: 0.5em;"><span class="hljs-keyword" style="color: rgb(204, 120, 50);">import</span> Vue <span class="hljs-keyword" style="color: rgb(204, 120, 50);">from</span> <span class="hljs-string" style="color: rgb(106, 135, 89);">'vue'</span>
+<span class="hljs-keyword" style="color: rgb(204, 120, 50);">import</span> VEW <span class="hljs-keyword" style="color: rgb(204, 120, 50);">from</span> <span class="hljs-string" style="color: rgb(106, 135, 89);">'vue-embedded-widget'</span>
+<span class="hljs-keyword" style="color: rgb(204, 120, 50);">import</span> HelloWorld <span class="hljs-keyword" style="color: rgb(204, 120, 50);">from</span> <span class="hljs-string" style="color: rgb(106, 135, 89);">'./components/HelloWorld'</span>
+
+const widget = VEW(Vue)
+
+widget.registerComponent(HelloWorld, <span class="hljs-string" style="color: rgb(106, 135, 89);">"vue-component"</span>);
+
+document.addEventListener(<span class="hljs-string" style="color: rgb(106, 135, 89);">'DOMContentLoaded'</span>, <span class="hljs-function"><span class="hljs-params">()</span> =&gt;</span> {
+  widget.mount();
+})</pre>
+        ~ Vue script 랜더링 코드 ~
+        </p>
+        <p>
+          이것의 결과는 다음과 같습니다.
+          하단의 단순한 엘리먼트를 웹페이지 소스코드 보기와 디버깅창 (Inspector)의 웹 마크업 구조를 동시에 살펴보기를 권합니다.
+          정상적으로 랜더링 되었다면, 소스보기에서는 단순한 HTML Element가 디버깅 창 (Inspector)에서는 랜더링 된 Vue component가 보이게 됩니다.
+        </p>
+        <p>
+          <test-my-comp msg="vue-app!"></test-my-comp>
+        <div data-vue-app="nice" msg="안녕!"></div>
+        <div class="nice-component" msg="하하하"></div>
+        </p>
+        <p>
+        <pre class="hljs" style="color: rgb(169, 183, 198); background: rgb(40, 43, 46); display: block; overflow-x: auto; padding: 0.5em;"><span class="xml"><span class="hljs-tag">&lt;<span class="hljs-name" style="color: rgb(232, 191, 106);">vue-component</span> <span class="hljs-attr">msg</span>=<span class="hljs-string" style="color: rgb(106, 135, 89);">"vue-app!"</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name" style="color: rgb(232, 191, 106);">vue-component</span>&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-name" style="color: rgb(232, 191, 106);">test-my-comp</span> <span class="hljs-attr">msg</span>=<span class="hljs-string" style="color: rgb(106, 135, 89);">"vue-app!"</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name" style="color: rgb(232, 191, 106);">test-my-comp</span>&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-name" style="color: rgb(232, 191, 106);">div</span> <span class="hljs-attr">data-vue-app</span>=<span class="hljs-string" style="color: rgb(106, 135, 89);">"nice"</span> <span class="hljs-attr">msg</span>=<span class="hljs-string" style="color: rgb(106, 135, 89);">"안녕!"</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name" style="color: rgb(232, 191, 106);">div</span>&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-name" style="color: rgb(232, 191, 106);">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string" style="color: rgb(106, 135, 89);">"nice-component"</span> <span class="hljs-attr">msg</span>=<span class="hljs-string" style="color: rgb(106, 135, 89);">"하하하"</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name" style="color: rgb(232, 191, 106);">div</span>&gt;</span></span></pre>
+        ~ 사용된 DOM Element 형태 ~
+        </p>
+        <p>
+          결과적으로 완전히 분리된 형태의 서비스 개발 생명주기와 Widget 형태로 기존 서비스에 접착형태로 개발/구현 가능하기 때문에 현대적인 웹앱으로의 전환을 쉽게 합니다.<br>
+          일단 vue 컴포넌트 구성으로 기능구현이 어느정도 진행이 되면, 기존 컴포넌트를 재배열하여 웹페이지를 다시 구성하는 것은 어렵지 않습니다.<br>
+          또한 data-vue, msg와 같은 props 값을 통해 서버 사이드에서 직접 랜더링 된 데이터를 vue component에 주입시키는 것도 가능합니다.<br>
+          <mark>"안녕", "하하하" "vue-app"이 msg 프로퍼티를 통해 주입되었다는 사실을 잊지 마세요!<br></mark>
+        </p>
+        <h3>재사용 가능한 서비스 컴포넌트 시스템</h3>
+        <p>
+          <div style="text-align: center;" >
+            <img src="https://user-images.githubusercontent.com/10525473/81318342-14cc9700-90c9-11ea-9481-547c9a5ca55c.png" />
+          </div>
+        또한 js 및 css를 포함 시키는 것만으로 동작이 가능하기 때문에, 다양한 서비스에서 동일한 컴포넌트를 재사용 가능한 시스템을 구현할 수 있습니다.<br>
+        이미지를 참고해주세요.<br>
+        가령, 당신이 하단의 스크립트를 당신의 로컬 <mark>index.html</mark>이나 <mark>codepen</mark>과 같은 외부 환경에서 다음을 고스란히 넣어보세요.
+        그 즉시 별도의 구현없이도 vue component 들이 랜더링 될 것입니다.
+
+        <pre class="hljs" style="color: rgb(169, 183, 198); background: rgb(40, 43, 46); display: block; overflow-x: auto; padding: 0.5em;"><span class="xml">  <span class="hljs-tag">&lt;<span class="hljs-name" style="color: rgb(232, 191, 106);">script</span> <span class="hljs-attr">src</span>=<span class="hljs-string" style="color: rgb(106, 135, 89);">"https://raw.githack.com/cloverhearts/vue-embedded-widget/feature/example/docs/components/js/chunk-vendors.56c457bf.js"</span>&gt;</span><span class="undefined"></span><span class="hljs-tag">&lt;/<span class="hljs-name" style="color: rgb(232, 191, 106);">script</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name" style="color: rgb(232, 191, 106);">script</span> <span class="hljs-attr">src</span>=<span class="hljs-string" style="color: rgb(106, 135, 89);">"https://raw.githack.com/cloverhearts/vue-embedded-widget/feature/example/docs/components/js/app.2b726121.js"</span>&gt;</span><span class="undefined"></span><span class="hljs-tag">&lt;/<span class="hljs-name" style="color: rgb(232, 191, 106);">script</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name" style="color: rgb(232, 191, 106);">link</span> <span class="hljs-attr">rel</span>=<span class="hljs-string" style="color: rgb(106, 135, 89);">"stylesheet"</span> <span class="hljs-attr">href</span>=<span class="hljs-string" style="color: rgb(106, 135, 89);">"https://raw.githubusercontent.com/cloverhearts/vue-embedded-widget/feature/example/docs/components/css/app.7275f92c.css"</span> /&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name" style="color: rgb(232, 191, 106);">script</span> <span class="hljs-attr">src</span>=<span class="hljs-string" style="color: rgb(106, 135, 89);">"./components/js/chunk-vendors.56c457bf.js"</span>&gt;</span><span class="undefined"></span><span class="hljs-tag">&lt;/<span class="hljs-name" style="color: rgb(232, 191, 106);">script</span>&gt;</span>
+
+  <span class="hljs-tag">&lt;<span class="hljs-name" style="color: rgb(232, 191, 106);">test-my-comp</span> <span class="hljs-attr">msg</span>=<span class="hljs-string" style="color: rgb(106, 135, 89);">"vue-app!"</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name" style="color: rgb(232, 191, 106);">test-my-comp</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name" style="color: rgb(232, 191, 106);">div</span> <span class="hljs-attr">data-vue-app</span>=<span class="hljs-string" style="color: rgb(106, 135, 89);">"nice"</span> <span class="hljs-attr">msg</span>=<span class="hljs-string" style="color: rgb(106, 135, 89);">"안녕!"</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name" style="color: rgb(232, 191, 106);">div</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name" style="color: rgb(232, 191, 106);">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string" style="color: rgb(106, 135, 89);">"nice-component"</span> <span class="hljs-attr">msg</span>=<span class="hljs-string" style="color: rgb(106, 135, 89);">"하하하"</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name" style="color: rgb(232, 191, 106);">div</span>&gt;</span></span></pre>
+        </p>
+        <p>
+          이미 예제가 존재합니다.<br>
+          저장소를 <a href="https://github.com/cloverhearts/vue-embedded-widget/tree/master/example">참고</a>해주세요
         </p>
       </section>
-      <footer>
-        <div>
-          
-          <test-my-comp msg="vue-app!"></test-my-comp>
-          <div data-vue-app="nice" msg="안녕!"></div>
-          <div class="nice-component" msg="하하하"></div>
-        </div>
-      </footer>
     </article>
   </main>
 </body>

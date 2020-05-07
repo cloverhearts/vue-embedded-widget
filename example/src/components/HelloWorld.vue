@@ -1,12 +1,16 @@
 <template>
-  <div class="hello">
-    Vue app {{msg}}
-  </div>
+  <VueAppAnchor>
+    <div class="hello">
+      {{msg}} with Vue component!
+    </div>
+  </VueAppAnchor>
 </template>
 
 <script>
+  import VueAppAnchor from './VueComponentHere'
 export default {
   name: 'HelloWorld',
+  components: { VueAppAnchor },
   props: {
     msg: String
   }
