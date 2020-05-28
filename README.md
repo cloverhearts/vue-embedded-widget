@@ -2,7 +2,7 @@
 
 Microfront architecture library based on vue
 
-Vue를 기반으로 구현된 마이크로 프론트 아키텍쳐 
+Vue를 기반으로 구현된 마이크로 프론트 아키텍쳐 라이브러리 
 
 # Web page
 [WebPage Link](https://cloverhearts.github.io/vue-embedded-widget)
