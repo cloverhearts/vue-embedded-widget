@@ -11,9 +11,9 @@
   <link rel="stylesheet" href="./assets/css/styles.css" />
 
   <!-- start: vue-embedded-widget library -->
-  <script src="https://raw.githack.com/cloverhearts/vue-embedded-widget/master/docs/components/js/chunk-vendors.56c457bf.js"></script>
-  <script src="https://raw.githack.com/cloverhearts/vue-embedded-widget/master/docs/components/js/app.2b726121.js"></script>
-  <link rel="stylesheet" href="https://raw.githack.com/cloverhearts/vue-embedded-widget/master/docs/components/css/app.7275f92c.css" />
+  <script src="https://raw.githack.com/cloverhearts/vue-embedded-widget/master/docs/components/js/chunk-vendors.104aa4f4.js"></script>
+  <script src="https://raw.githack.com/cloverhearts/vue-embedded-widget/master/docs/components/js/app.f142f3ad.js"></script>
+  <link rel="stylesheet" href="https://raw.githack.com/cloverhearts/vue-embedded-widget/master/docs/components/css/app.6732956f.css" />
   <!-- end: vue-embedded-widget library -->
   <title>VEW - Vue Embedded Widget</title>
 </head>
@@ -75,8 +75,8 @@
         <p>
 
         <pre class="hljs" style="color: rgb(169, 183, 198); background: rgb(40, 43, 46); display: block; overflow-x: auto; padding: 0.5em;"><span class="xml">  // app js loaded
-  <span class="hljs-tag">&lt;<span class="hljs-name" style="color: rgb(232, 191, 106);">script</span> <span class="hljs-attr">src</span>=<span class="hljs-string" style="color: rgb(106, 135, 89);">"./components/js/app.2b726121.js"</span>&gt;</span><span class="undefined"></span><span class="hljs-tag">&lt;/<span class="hljs-name" style="color: rgb(232, 191, 106);">script</span>&gt;</span>
-  <span class="hljs-tag">&lt;<span class="hljs-name" style="color: rgb(232, 191, 106);">link</span> <span class="hljs-attr">rel</span>=<span class="hljs-string" style="color: rgb(106, 135, 89);">"stylesheet"</span> <span class="hljs-attr">href</span>=<span class="hljs-string" style="color: rgb(106, 135, 89);">"./components/css/app.7275f92c.css"</span> /&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name" style="color: rgb(232, 191, 106);">script</span> <span class="hljs-attr">src</span>=<span class="hljs-string" style="color: rgb(106, 135, 89);">"./components/js/app.f142f3ad.js"</span>&gt;</span><span class="undefined"></span><span class="hljs-tag">&lt;/<span class="hljs-name" style="color: rgb(232, 191, 106);">script</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name" style="color: rgb(232, 191, 106);">link</span> <span class="hljs-attr">rel</span>=<span class="hljs-string" style="color: rgb(106, 135, 89);">"stylesheet"</span> <span class="hljs-attr">href</span>=<span class="hljs-string" style="color: rgb(106, 135, 89);">"./components/css/app.6732956f.css"</span> /&gt;</span>
   <span class="hljs-tag">&lt;<span class="hljs-name" style="color: rgb(232, 191, 106);">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string" style="color: rgb(106, 135, 89);">"lagacy-codes"</span>&gt;</span>
     ....
     // vue component
@@ -120,6 +120,9 @@ const widget = VEW(Vue)
 widget.registerComponent(HelloWorld, <span class="hljs-string" style="color: rgb(106, 135, 89);">"vue-component"</span>);
 
 document.addEventListener(<span class="hljs-string" style="color: rgb(106, 135, 89);">'DOMContentLoaded'</span>, <span class="hljs-function"><span class="hljs-params">()</span> =&gt;</span> {
+  if (typeof window !== 'undefined') {
+    window._vew = widget
+  }
   widget.mount();
 })</pre>
         ~ Vue script 랜더링 코드 ~
@@ -157,10 +160,10 @@ document.addEventListener(<span class="hljs-string" style="color: rgb(106, 135, 
         가령, 당신이 하단의 스크립트를 당신의 로컬 <mark>index.html</mark>이나 <mark>codepen</mark>과 같은 외부 환경에서 다음을 고스란히 넣어보세요.
         그 즉시 별도의 구현없이도 vue component 들이 랜더링 될 것입니다.
 
-        <pre class="hljs" style="color: rgb(169, 183, 198); background: rgb(40, 43, 46); display: block; overflow-x: auto; padding: 0.5em;"><span class="xml">  <span class="hljs-tag">&lt;<span class="hljs-name" style="color: rgb(232, 191, 106);">script</span> <span class="hljs-attr">src</span>=<span class="hljs-string" style="color: rgb(106, 135, 89);">"https://raw.githack.com/cloverhearts/vue-embedded-widget/master/docs/components/js/chunk-vendors.56c457bf.js"</span>&gt;</span><span class="undefined"></span><span class="hljs-tag">&lt;/<span class="hljs-name" style="color: rgb(232, 191, 106);">script</span>&gt;</span>
-  <span class="hljs-tag">&lt;<span class="hljs-name" style="color: rgb(232, 191, 106);">script</span> <span class="hljs-attr">src</span>=<span class="hljs-string" style="color: rgb(106, 135, 89);">"https://raw.githack.com/cloverhearts/vue-embedded-widget/master/docs/components/js/app.2b726121.js"</span>&gt;</span><span class="undefined"></span><span class="hljs-tag">&lt;/<span class="hljs-name" style="color: rgb(232, 191, 106);">script</span>&gt;</span>
-  <span class="hljs-tag">&lt;<span class="hljs-name" style="color: rgb(232, 191, 106);">link</span> <span class="hljs-attr">rel</span>=<span class="hljs-string" style="color: rgb(106, 135, 89);">"stylesheet"</span> <span class="hljs-attr">href</span>=<span class="hljs-string" style="color: rgb(106, 135, 89);">"https://raw.githack.com/cloverhearts/vue-embedded-widget/master/docs/components/css/app.7275f92c.css"</span> /&gt;</span>
-  <span class="hljs-tag">&lt;<span class="hljs-name" style="color: rgb(232, 191, 106);">script</span> <span class="hljs-attr">src</span>=<span class="hljs-string" style="color: rgb(106, 135, 89);">"./components/js/chunk-vendors.56c457bf.js"</span>&gt;</span><span class="undefined"></span><span class="hljs-tag">&lt;/<span class="hljs-name" style="color: rgb(232, 191, 106);">script</span>&gt;</span>
+        <pre class="hljs" style="color: rgb(169, 183, 198); background: rgb(40, 43, 46); display: block; overflow-x: auto; padding: 0.5em;"><span class="xml">  <span class="hljs-tag">&lt;<span class="hljs-name" style="color: rgb(232, 191, 106);">script</span> <span class="hljs-attr">src</span>=<span class="hljs-string" style="color: rgb(106, 135, 89);">"https://raw.githack.com/cloverhearts/vue-embedded-widget/master/docs/components/js/chunk-vendors.104aa4f4.js"</span>&gt;</span><span class="undefined"></span><span class="hljs-tag">&lt;/<span class="hljs-name" style="color: rgb(232, 191, 106);">script</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name" style="color: rgb(232, 191, 106);">script</span> <span class="hljs-attr">src</span>=<span class="hljs-string" style="color: rgb(106, 135, 89);">"https://raw.githack.com/cloverhearts/vue-embedded-widget/master/docs/components/js/app.f142f3ad.js"</span>&gt;</span><span class="undefined"></span><span class="hljs-tag">&lt;/<span class="hljs-name" style="color: rgb(232, 191, 106);">script</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name" style="color: rgb(232, 191, 106);">link</span> <span class="hljs-attr">rel</span>=<span class="hljs-string" style="color: rgb(106, 135, 89);">"stylesheet"</span> <span class="hljs-attr">href</span>=<span class="hljs-string" style="color: rgb(106, 135, 89);">"https://raw.githack.com/cloverhearts/vue-embedded-widget/master/docs/components/css/app.6732956f.css"</span> /&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name" style="color: rgb(232, 191, 106);">script</span> <span class="hljs-attr">src</span>=<span class="hljs-string" style="color: rgb(106, 135, 89);">"./components/js/chunk-vendors.104aa4f4.js"</span>&gt;</span><span class="undefined"></span><span class="hljs-tag">&lt;/<span class="hljs-name" style="color: rgb(232, 191, 106);">script</span>&gt;</span>
 
   <span class="hljs-tag">&lt;<span class="hljs-name" style="color: rgb(232, 191, 106);">test-my-comp</span> <span class="hljs-attr">msg</span>=<span class="hljs-string" style="color: rgb(106, 135, 89);">"vue-app!"</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name" style="color: rgb(232, 191, 106);">test-my-comp</span>&gt;</span>
   <span class="hljs-tag">&lt;<span class="hljs-name" style="color: rgb(232, 191, 106);">div</span> <span class="hljs-attr">data-vue-app</span>=<span class="hljs-string" style="color: rgb(106, 135, 89);">"nice"</span> <span class="hljs-attr">msg</span>=<span class="hljs-string" style="color: rgb(106, 135, 89);">"안녕!"</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name" style="color: rgb(232, 191, 106);">div</span>&gt;</span>
